@@ -1,12 +1,12 @@
 ##Requirement
-node.js
+node.js<br/>
 npm
 ##install
 npm install
 ##run
 ###android(need simulator running)
-npm install -g react-native
+npm install -g react-native<br/>
 react-native run-android
 ###client
-npm install -g electron
+npm install -g electron<br/>
 electron .
