@@ -1,0 +1,21 @@
+{
+  "name": "tester",
+  "version": "0.0.1",
+  "private": true,
+  "main": "main.js",
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "desk": "electron .",
+    "android": "react-native run-android"
+  },
+  "dependencies": {
+    "react": "15.3.2",
+    "react-native": "0.34.1"
+  },
+  "devDependencies": {
+    "electron": "^1.4.3"
+  },
+  "description": "react-native init tester\r npm install --save-dev electron",
+  "author": "",
+  "license": "ISC"
+}
