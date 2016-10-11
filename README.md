@@ -10,3 +10,7 @@ react-native run-android
 ###client
 npm install -g electron<br/>
 electron .
+##pacakage
+###desktop
+npm install -g electron-packager<br/>
+electron-packager .

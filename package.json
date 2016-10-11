@@ -13,7 +13,12 @@
     "react-native": "0.34.1"
   },
   "devDependencies": {
-    "electron": "^1.4.3"
+    "babel": "^6.5.2",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "webpack": "^1.13.2"
   },
   "description": "react-native init tester\r npm install --save-dev electron",
   "author": "",
