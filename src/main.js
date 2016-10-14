@@ -16,7 +16,7 @@ export default class Main extends Component {
 		          To get started, edit 'src/main.js'
 		        </Text>
 		        <Text style={styles.instructions}>
-		          Mobile can select reload to reload2,{'\n'}
+		          Mobile can select reload to reload,{'\n'}
 		          Desktop need to webpack --watch
 		        </Text>
 		    </View>
