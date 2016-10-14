@@ -4,21 +4,23 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, {
+	Component
+} from 'react';
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+	AppRegistry,
+	StyleSheet,
+	Text,
+	View
 } from 'react-native';
-import main from './src/main'
+import Main from './src/main'
 
 export default class tester extends Component {
-  render() {
-    return main.call(this, this.props, this.state);
-  }
+	render() {
+		return (
+			<Main/>
+		)
+	}
 }
-
-
 
 AppRegistry.registerComponent('tester', () => tester);
