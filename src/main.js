@@ -23,9 +23,8 @@ export default class Main extends Component {
 		);
 	}
 }
-const util = Util.call();
 
-const styles = util.jsonRemoveNull({
+const styles = Util.jsonRemoveNull({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
@@ -36,12 +35,12 @@ const styles = util.jsonRemoveNull({
 		fontSize: 20,
 		textAlign: 'center',
 		margin: 10,
-		display: util.isDesktop('block')
+		display: Util.isDesktop('block')
 	},
 	instructions: {
 		textAlign: 'center',
 		color: '#333333',
 		marginBottom: 5,
-		display: util.isDesktop('block')
+		display: Util.isDesktop('block')
 	},
 });
