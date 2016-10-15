@@ -3,14 +3,15 @@ import React, {
 } from 'react';
 
 export default class Text extends Component {
-	render() {
-		if (this.props.children instanceof Array) {
-			return (
-				<a style={this.props.style}>{this.props.children.map(v=>v=="\n"?<br/>:v)}<br/></a>
-			);
+	replaceLineBreak(cont) {
+		if (cont instanceof Array) {
+			return cont.map(v => v == "\n" ? <br/> : v);
 		}
+		return cont;
+	}
+	render() {
 		return (
-			<a style={this.props.style}>{this.props.children}<br/></a>
+			<a style={this.props.style}>{this.replaceLineBreak(this.props.children)}<br/></a>
 		);
 	}
 }
