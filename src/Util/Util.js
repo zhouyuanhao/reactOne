@@ -13,6 +13,12 @@ const Util = {
 	isAndroid: function() {
 		return Platform.OS == 'android'
 	},
+	isDesktop: function() {
+		return Platform.OS == 'desktop'
+	},
+	isWeb: function() {
+		return Platform.OS == 'web'
+	},
 	jsonRemoveNull: function(json) {
 		if (!(json instanceof Object)) {
 			return json;

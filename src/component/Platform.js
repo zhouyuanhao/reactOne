@@ -1,7 +1,7 @@
 'use strict';
 
 var Platform = {
-	OS: 'web',
+	OS: window.location.hostname == "" ? "desktop" : "web",
 	get Version() {
 		return navigator.userAgent;
 	},
