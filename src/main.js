@@ -3,7 +3,7 @@ import React, {
 } from 'react';
 import View from './component/View'
 import Text from './component/Text'
-
+import Util from './Util/Util'
 
 export default class Main extends Component {
 	render() {
@@ -11,7 +11,7 @@ export default class Main extends Component {
 			<View style={styles.container}>
 		        <Text style={styles.welcome}>
 		          Welcome to React Native!
-		        </Text>
+		        </Text> 
 		        <Text style={styles.instructions}>
 		          To get started, edit 'src/main.js'
 		        </Text>
@@ -23,24 +23,25 @@ export default class Main extends Component {
 		);
 	}
 }
+const util = Util.call();
 
-const styles = {
+const styles = util.jsonRemoveNull({
 	container: {
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#F5FCFF',
+		backgroundColor: '#F5FCFF'
 	},
 	welcome: {
 		fontSize: 20,
 		textAlign: 'center',
 		margin: 10,
-		display: 'block'
+		display: util.isDesktop('block')
 	},
 	instructions: {
 		textAlign: 'center',
 		color: '#333333',
 		marginBottom: 5,
-		display: 'block'
+		display: util.isDesktop('block')
 	},
-};
+});
