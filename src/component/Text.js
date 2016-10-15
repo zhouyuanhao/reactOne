@@ -5,8 +5,7 @@ import React, {
 export default class Text extends Component {
 	replaceLineBreak(cont) {
 		if (cont instanceof Array) {
-			var count = 0;
-			return cont.map(v => v == "\n" ? <br key={'n'+count++}/> : v);
+			return cont.map(v => v == "\n" ? <br key="\n"/> : v);
 		}
 		return cont;
 	}
