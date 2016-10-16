@@ -35,12 +35,12 @@ const styles = Util.jsonRemoveNull({
 		fontSize: 20,
 		textAlign: 'center',
 		margin: 10,
-		display: Util.isDesktop() ? 'block' : null
+		display: !Util.isMobile() ? 'block' : null
 	},
 	instructions: {
 		textAlign: 'center',
 		color: '#333333',
 		marginBottom: 5,
-		display: Util.isDesktop() ? 'block' : null
+		display: !Util.isMobile() ? 'block' : null
 	},
 });

@@ -7,9 +7,10 @@
 import React, {
   Component
 } from 'react';
+import { render } from 'react-dom'
 import Main from './src/main'
 
-ReactDOM.render(
+render(
   <Main/>,
   document.getElementById('example')
 );
