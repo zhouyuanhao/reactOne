@@ -4,21 +4,21 @@ import React, {
 import View from './component/View'
 import Text from './component/Text'
 import Util from './Util/Util'
+import Navi from './component/Router/Navi'
 
 export default class Main extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
-		        <Text style={styles.welcome}>
-		          Welcome to React Native!
+		 		<Text style={styles.welcome}>
+					About the author
 		        </Text> 
 		        <Text style={styles.instructions}>
-		          To get started, edit 'src/main.js'
+				 	476916922@qq.com
 		        </Text>
-		        <Text style={styles.instructions}>
-		          Mobile can select reload to reload,{'\n'}
-		          Desktop need to webpack --watch
-		        </Text>
+				<Navi target="/" style={styles.instructions}>
+					go to home
+				</Navi>
 		    </View>
 		);
 	}

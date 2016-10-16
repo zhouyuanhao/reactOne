@@ -34,6 +34,19 @@ const Util = {
 			}
 		}
 		return json;
+	},
+	path2key: function(path) {
+		if (path == null) {
+			console.error('path is null')
+		}
+		if (path == '/') {
+			return "root";
+		};
+		if (path.startsWith('/')) {
+			path = path.replace('/', '');
+		};
+		var key = path.replace(/\//g, "_");
+		return key;
 	}
 }
 export default Util;

@@ -13,12 +13,12 @@ import {
 	Text,
 	View
 } from 'react-native';
-import Main from './src/main'
+import App from './src/App'
 
 export default class tester extends Component {
 	render() {
 		return (
-			<Main/>
+			<App/>
 		)
 	}
 }

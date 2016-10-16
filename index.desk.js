@@ -5,12 +5,19 @@
  */
 
 import React, {
-  Component
+	Component
 } from 'react';
-import { render } from 'react-dom'
-import Main from './src/main'
+import {
+	Router,
+	Route,
+	hashHistory
+} from 'react-router';
+import {
+	render
+} from 'react-dom'
+import App from './src/App'
 
 render(
-  <Main/>,
-  document.getElementById('example')
+	<App/>,
+	document.getElementById('example')
 );
