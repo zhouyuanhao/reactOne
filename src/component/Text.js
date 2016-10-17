@@ -12,7 +12,7 @@ export default class Text extends Component {
 	}
 	render() {
 		return (
-			<a style={this.props.style}>{this.replaceLineBreak(this.props.children)}</a>
+			<a {...this.props}>{this.replaceLineBreak(this.props.children)}</a>
 		);
 	}
 }

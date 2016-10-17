@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "test": "jest",
-    "start-dev-server": "webpack-dev-server",
+    "start:dev-server": "webpack-dev-server --inline --content-base --history-api-fallback",
     "webpack-watch": "webpack --watch",
     "start:desktop": "electron .",
     "start:android": "react-native run-android"

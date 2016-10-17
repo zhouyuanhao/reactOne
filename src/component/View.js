@@ -5,7 +5,7 @@ import React, {
 export default class View extends Component {
 	render() {
 		return (
-			<div style={this.props.style}>
+			<div {...this.props}>
 				{this.props.children}
 			</div>
 		);

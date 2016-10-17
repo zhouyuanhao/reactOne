@@ -4,7 +4,7 @@ import React, {
 import View from './component/View'
 import Text from './component/Text'
 import Util from './Util/Util'
-import Navi from './component/Router/Navi'
+import Action from './component/Router/Action'
 
 export default class Main extends Component {
 	render() {
@@ -20,9 +20,9 @@ export default class Main extends Component {
 		          Mobile can select reload to reload,{'\n'}
 		          Desktop need to webpack --watch
 		        </Text>
-				<Navi target="/about" style={styles.instructions}>
+				<Text onClick={Action.go("/about")} style={styles.instructions}>
 					go to about
-				</Navi>
+				</Text>
 		    </View>
 		);
 	}

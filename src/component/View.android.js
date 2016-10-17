@@ -1,5 +1,3 @@
-import {
-	View as ViewNative
-} from 'react-native';
+import View from './View.native';
 
-export default class View extends ViewNative {}
+export default View;

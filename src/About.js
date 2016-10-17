@@ -4,9 +4,9 @@ import React, {
 import View from './component/View'
 import Text from './component/Text'
 import Util from './Util/Util'
-import Navi from './component/Router/Navi'
+import Action from './component/Router/Action'
 
-export default class Main extends Component {
+export default class About extends Component {
 	render() {
 		return (
 			<View style={styles.container}>
@@ -16,9 +16,9 @@ export default class Main extends Component {
 		        <Text style={styles.instructions}>
 				 	476916922@qq.com
 		        </Text>
-				<Navi target="/" style={styles.instructions}>
+				<Text onClick={Action.goBack()} style={styles.instructions}>
 					go to home
-				</Navi>
+				</Text>
 		    </View>
 		);
 	}

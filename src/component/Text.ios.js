@@ -1,5 +1,3 @@
-import {
-	Text
-} from 'react-native';
+import Text from './Text.native';
 
-export default class Text extends Text {}
+export default Text;
