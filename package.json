@@ -19,7 +19,8 @@
     "react-router": "^2.8.1"
   },
   "jest": {
-    "preset": "jest-react-native"
+    "preset": "jest-react-native",
+    "setupFiles": ["./__tests__mock/window.js"]
   },
   "devDependencies": {
     "babel-jest": "16.0.0",
