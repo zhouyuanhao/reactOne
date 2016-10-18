@@ -8,10 +8,12 @@
     "test": "jest",
     "start:dev-server": "webpack-dev-server --inline --content-base --history-api-fallback",
     "webpack-watch": "webpack --watch",
+    "start:server": "node express.js",
     "start:desktop": "electron .",
     "start:android": "react-native run-android"
   },
   "dependencies": {
+    "express": "^4.14.0",
     "react": "15.3.2",
     "react-dom": "^15.3.2",
     "react-native": "0.35.0",
@@ -20,7 +22,9 @@
   },
   "jest": {
     "preset": "jest-react-native",
-    "setupFiles": ["./__tests__mock/window.js"]
+    "setupFiles": [
+      "./__tests__mock/window.js"
+    ]
   },
   "devDependencies": {
     "babel-jest": "16.0.0",
