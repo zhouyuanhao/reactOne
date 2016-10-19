@@ -8,7 +8,11 @@ app.use('/dist/*.js', function(req, res) {
 		root: __dirname
 	});
 });
-
+app.use('/json', function(req, res) {
+	res.json({
+		a: 1
+	});
+});
 app.use('/', function(req, res) {
 	res.sendFile('./index.desk.html', {
 		root: __dirname

@@ -19,3 +19,9 @@ export default class App extends Component {
 		);
 	}
 }
+
+fetch("http://10.0.0.106:8080/json").then(function(res) {
+	res.json().then(function(data) {
+		console.log(data)
+	})
+})
