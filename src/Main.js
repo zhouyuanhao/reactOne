@@ -35,7 +35,7 @@ class Main extends Component {
 					go to about
 				</Text>
 				<Text onClick={()=>actions.addcount(1)} style={styles.instructions}>
-					click me to add count below(redux)
+					count add 1(redux)
 				</Text>
 				<Text style={styles.instructions}>
 					{this.props.count}

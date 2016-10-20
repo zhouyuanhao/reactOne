@@ -1,13 +1,21 @@
 import React, {
 	Component
 } from 'react';
+import {
+	connect
+} from 'react-redux';
+import {
+	bindActionCreators
+} from 'redux';
 import View from './component/View';
 import Text from './component/Text';
 import Util from './Util/Util';
 import Action from './component/Router/Action';
+import * as ActionCreators from './redux/actionCreators';
 
-export default class About extends Component {
+class About extends Component {
 	render() {
+		const actions = this.props.actions
 		return (
 			<View style={styles.container}>
 		 		<Text style={styles.welcome}>
@@ -18,6 +26,12 @@ export default class About extends Component {
 		        </Text>
 				<Text onClick={Action.goBack()} style={styles.instructions}>
 					go to home
+				</Text>
+				<Text onClick={()=>actions.addcount(2)} style={styles.instructions}>
+					click to add count 2(redux)
+				</Text>
+				<Text style={styles.instructions}>
+					{this.props.count}
 				</Text>
 		    </View>
 		);
@@ -44,3 +58,9 @@ const styles = Util.jsonRemoveNull({
 		display: !Util.isMobile() ? 'block' : null
 	},
 });
+
+export default connect(state => ({
+	count: state.count
+}), dispatch => ({
+	actions: bindActionCreators(ActionCreators, dispatch)
+}))(About)

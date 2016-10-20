@@ -8,7 +8,6 @@ const init = {
 const reducer = (state = init, action) => {
 	switch (action.type) {
 		case 'ADD_COUNT':
-			console.log(state);
 			return {
 				count: state.count + action.count
 			};
