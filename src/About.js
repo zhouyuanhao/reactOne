@@ -1,10 +1,10 @@
 import React, {
 	Component
 } from 'react';
-import View from './component/View'
-import Text from './component/Text'
-import Util from './Util/Util'
-import Action from './component/Router/Action'
+import View from './component/View';
+import Text from './component/Text';
+import Util from './Util/Util';
+import Action from './component/Router/Action';
 
 export default class About extends Component {
 	render() {
