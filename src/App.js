@@ -8,32 +8,14 @@ import React, {
 import {
 	Provider
 } from 'react-redux';
-import {
-	createStore
-} from 'redux';
 import Main from './Main';
 import About from './About';
-
-
-const init = {
-	count: 0
-};
-const reducer = (state = init, action) => {
-	switch (action.type) {
-		case 'ADD_COUNT':
-			console.log(state);
-			return {
-				count: state.count + action.count
-			};
-		default:
-			return state;
-	}
-};
+import reduxStore from './redux/reduxStore'
 
 export default class App extends Component {
 	render() {
 		return (
-			<Provider store={createStore(reducer)}>
+			<Provider store={reduxStore}>
 				<Router>
 					<Route path="/" component={Main} hideNavBar={true}/>
 					<Route path="/about" component={About}/>
