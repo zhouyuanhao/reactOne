@@ -1,5 +1,6 @@
 import Platform from '../component/Platform';
-
+const reomoteHost = "10.0.0.106";
+const remotePort = "8080";
 const Util = {
 	isDesktop: function() {
 		return !Platform.isMobile
@@ -47,6 +48,13 @@ const Util = {
 		};
 		var key = path.replace(/\//g, "_");
 		return key;
+	},
+	serverHost: function() {
+		if (this.isMobile()) //mobile
+			return "http://" + reomoteHost + ":" + remotePort;
+		if (this.isDesktop()) //electron
+			return "http://" + reomoteHost + ":" + remotePort;
+		return window.location.origin; //web
 	}
 }
 export default Util;

@@ -11,6 +11,7 @@ import {
 import Main from './Main';
 import About from './About';
 import reduxStore from './redux/reduxStore'
+import Util from './Util/Util'
 
 export default class App extends Component {
 	render() {
@@ -25,7 +26,7 @@ export default class App extends Component {
 	}
 }
 
-fetch("http://10.0.0.106:8080/json").then(function(res) {
+fetch(Util.serverHost() + "/json").then(function(res) {
 	res.json().then(function(data) {
 		console.log(data)
 	})
