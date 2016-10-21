@@ -12,6 +12,7 @@ import Main from './Main';
 import About from './About';
 import reduxStore from './redux/reduxStore'
 import Util from './Util/Util'
+import DB from './DB/DB'
 
 export default class App extends Component {
 	render() {
@@ -30,4 +31,13 @@ fetch(Util.serverHost() + "/json").then(function(res) {
 	res.json().then(function(data) {
 		console.log(data)
 	})
+})
+
+var db = new DB("user");
+/*db.insert({
+	no: 1,
+	name: "a"
+});*/
+db.find({}, function(err, docs) {
+	console.log(docs)
 })
