@@ -2,7 +2,7 @@ import Platform from '../component/Platform';
 const reomoteHost = "10.0.0.106";
 const remotePort = "8080";
 const Util = {
-	isDesktop: function() {
+	isBrowser: function() {
 		return !Platform.isMobile
 	},
 	isMobile: function() {
