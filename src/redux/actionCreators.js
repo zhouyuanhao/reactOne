@@ -4,3 +4,17 @@ export function addcount(count) {
 		count
 	}
 };
+
+export function showWindow(content, callback) {
+	return {
+		type: 'SHOW_WINDOW',
+		content,
+		callback
+	}
+};
+
+export function hideWindow() {
+	return {
+		type: 'HIDE_WINDOW',
+	}
+};

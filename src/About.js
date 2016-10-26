@@ -11,6 +11,7 @@ import View from './component/View';
 import Text from './component/Text';
 import Util from './Util/Util';
 import Action from './component/Router/Action';
+import Window from './component/Window';
 import * as ActionCreators from './redux/actionCreators';
 
 class About extends Component {
@@ -33,6 +34,10 @@ class About extends Component {
 				<Text style={styles.instructions}>
 					{this.props.count}
 				</Text>
+				<Text onClick={()=>actions.showWindow("aaaaa",function(){console.log(123)})} style={styles.instructions}>
+					click to show alert window
+				</Text>
+				<Window></Window>
 		    </View>
 		);
 	}
@@ -60,7 +65,8 @@ const styles = Util.jsonRemoveNull({
 });
 
 export default connect(state => ({
-	count: state.count
+	count: state.count,
+	showAlert: state.showAlert
 }), dispatch => ({
 	actions: bindActionCreators(ActionCreators, dispatch)
 }))(About)
