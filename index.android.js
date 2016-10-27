@@ -15,7 +15,7 @@ import {
 } from 'react-native';
 import App from './src/App'
 
-export default class tester extends Component {
+export default class reactOne extends Component {
 	render() {
 		return (
 			<App/>
@@ -23,4 +23,4 @@ export default class tester extends Component {
 	}
 }
 
-AppRegistry.registerComponent('tester', () => tester);
+AppRegistry.registerComponent('reactOne', () => reactOne);

@@ -1,4 +1,4 @@
-package com.tester;
+package com.reactone;
 
 import android.app.Application;
 import android.util.Log;

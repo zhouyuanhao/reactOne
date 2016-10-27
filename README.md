@@ -14,6 +14,8 @@ npm install
 react-native run-android
 ###client
 electron .
+###web
+node express.js
 ##pacakage
 ###desktop
 electron-packager .
