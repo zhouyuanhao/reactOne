@@ -1,6 +1,3 @@
-window = {
-	location: {}
-}
 import Util from '../../src/Util/Util';
 
 

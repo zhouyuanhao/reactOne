@@ -22,7 +22,7 @@ class Main extends Component {
 		return (
 			<View style={styles.container}>
 		        <Text style={styles.welcome}>
-		          Welcome to React Native!
+		          Welcome to React One!
 		        </Text> 
 		        <Text style={styles.instructions}>
 		          To get started, edit 'src/main.js'
