@@ -1,5 +1,5 @@
 import Platform from '../component/Platform';
-const reomoteHost = "10.0.0.106";
+const reomoteHost = "10.0.0.105";
 const remotePort = "8080";
 const Util = {
 	isBrowser: function() {

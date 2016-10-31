@@ -35,17 +35,18 @@ class Main extends Component {
 					go to about
 				</Text>
 				<Text onClick={()=>actions.addcount(1)} style={styles.instructions}>
-		click to add count 1(redux)
+					click to add count 1(redux)
 				</Text>
 				<Text style={styles.instructions}>
 					{this.props.count}
+				</Text>
+				<Text onClick={()=>actions.fetchAjax(Util.serverHost() + "/json")} style={styles.instructions}>
+					call ajax {this.props.json}
 				</Text>
 		    </View>
 		);
 	}
 }
-
-
 
 const styles = Util.jsonRemoveNull({
 	container: {
@@ -70,7 +71,8 @@ const styles = Util.jsonRemoveNull({
 
 
 export default connect(state => ({
-	count: state.count
+	count: state.count,
+	json: state.json
 }), dispatch => ({
 	actions: bindActionCreators(ActionCreators, dispatch)
 }))(Main)

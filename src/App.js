@@ -27,12 +27,6 @@ export default class App extends Component {
 	}
 }
 
-fetch(Util.serverHost() + "/json").then(function(res) {
-	res.json().then(function(data) {
-		console.log(data)
-	})
-})
-
 var db = new DB("user");
 /*db.insert({
 	no: 1,
