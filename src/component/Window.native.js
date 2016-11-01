@@ -23,7 +23,7 @@ class Window extends Component {
 			'flex': 1
 		}
 		return (
-			<Modal visible={this.props.showAlert} transparent={true} animationType={false} onRequestClose={()=>{actions.hideWindow()}}>
+			<Modal visible={this.props.showAlert} transparent={true} animationType={'none'} onRequestClose={()=>{actions.hideWindow()}}>
 				<View style={background}>
 					<Text >{this.props.content}}</Text>
 					<Text onClick={()=>{this.props.callback();actions.hideWindow();}}>OK</Text>
