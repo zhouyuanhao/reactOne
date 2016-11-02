@@ -19,7 +19,6 @@ class Window extends Component {
 	}
 	render() {
 		const actions = this.props.actions
-
 		return (
 			<Modal show={this.props.showAlert} onHide={this.close}>
 				<Modal.Header closeButton>
@@ -29,7 +28,7 @@ class Window extends Component {
 					{this.props.content}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button onClick={this.close}>Close</Button>
+					<Button onClick={()=>{this.props.callback(); this.close(); }}>Close</Button>
 				</Modal.Footer>
 			</Modal>
 		);
@@ -38,9 +37,9 @@ class Window extends Component {
 
 //Redux
 export default connect(state => ({
-	showAlert: state.showAlert,
-	content: state.alertContent,
-	callback: state.alertCallback
+	showAlert: state.alertReducer.showAlert,
+	content: state.alertReducer.alertContent,
+	callback: state.alertReducer.alertCallback
 }), dispatch => ({
 	actions: bindActionCreators(ActionCreators, dispatch)
 }))(Window)

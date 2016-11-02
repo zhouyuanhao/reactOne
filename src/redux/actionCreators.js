@@ -5,6 +5,12 @@ export function addcount(count) {
 	}
 };
 
+export function resetcount() {
+	return {
+		type: 'RESET_COUNT'
+	}
+};
+
 export function showWindow(content, callback) {
 	return {
 		type: 'SHOW_WINDOW',

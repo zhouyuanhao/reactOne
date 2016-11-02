@@ -31,6 +31,9 @@ class About extends Component {
 				<Text onClick={()=>actions.addcount(2)} style={styles.instructions}>
 					click to add count 2(redux)
 				</Text>
+				<Text onClick={()=>actions.resetcount()} style={styles.instructions}>
+					click to clear(redux)
+				</Text>
 				<Text style={styles.instructions}>
 					{this.props.count}
 				</Text>
@@ -65,8 +68,7 @@ const styles = Util.jsonRemoveNull({
 });
 
 export default connect(state => ({
-	count: state.count,
-	showAlert: state.showAlert
+	count: state.countReducer.count
 }), dispatch => ({
 	actions: bindActionCreators(ActionCreators, dispatch)
 }))(About)

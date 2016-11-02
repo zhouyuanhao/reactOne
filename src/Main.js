@@ -71,8 +71,8 @@ const styles = Util.jsonRemoveNull({
 
 
 export default connect(state => ({
-	count: state.count,
-	json: state.json
+	count: state.countReducer.count,
+	json: state.ajaxReducer.json
 }), dispatch => ({
 	actions: bindActionCreators(ActionCreators, dispatch)
 }))(Main)
