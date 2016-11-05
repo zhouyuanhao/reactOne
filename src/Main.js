@@ -8,6 +8,7 @@ import {
 	bindActionCreators
 } from 'redux';
 import View from './component/View';
+import Button from './component/Button';
 import Text from './component/Text';
 import Util from './Util/Util';
 import Action from './component/Router/Action';
@@ -34,9 +35,11 @@ class Main extends Component {
 				<Text onClick={Action.go("/about")} style={styles.instructions}>
 					go to about
 				</Text>
-				<Text onClick={()=>actions.addcount(1)} style={styles.instructions}>
-					click to add count 1(redux)
-				</Text>
+				<Button onClick={()=>actions.addcount(1)} >
+					<Text style={styles.instructions}>
+						click to add count 1(redux)
+					</Text>
+				</Button>
 				<Text style={styles.instructions}>
 					{this.props.count}
 				</Text>
