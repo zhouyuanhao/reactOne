@@ -51,7 +51,9 @@ const styles = Util.jsonRemoveNull({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#F5FCFF'
+		backgroundColor: '#F5FCFF',
+		display: !Util.isMobile() ? 'flex' : null,
+		flexDirection: !Util.isMobile() ? 'column' : null
 	},
 	welcome: {
 		fontSize: 20,
