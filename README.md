@@ -14,6 +14,8 @@ after clone the project you need to init the project by
 ```
 npm install
 ```
+##compile
+webpack --watch
 ##Run
 ###browser(express also service the backend logic,i.e. ajax service)
 node express.js
